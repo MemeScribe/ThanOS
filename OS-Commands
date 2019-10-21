@@ -1,0 +1,19 @@
+QEMU:
+
+qemu-system-x86_64 [FILE NAME.bin]: Runs file as Operating system
+
+ASSEMBLY:
+
+nasm -f bin [FILE NAME.asm]: Complies NASM assembly code into Binary format (.bin)
+
+C:
+
+gcc -ffreestanding -c [FILE NAME.c] -o [FILE NAME.o]: Compiles C file into object file
+
+objdump [FILE NAME.o]: presents information about the object file
+
+ld -o [FILE NAME.bin] -Ttext 0x0 --oformat binary [FILE NAME.o]: link the object file into abinary file
+
+xxd [FILE NAME]: presents memory information about the file
+
+ndisasm -b 32 [FILE NAME.bin]: shows assembly processes used in bin file
